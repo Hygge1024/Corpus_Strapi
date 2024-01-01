@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/corpuses",
+      "handler": "corpus.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/corpuses/count",
+      "handler": "corpus.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/corpuses/:id",
+      "handler": "corpus.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/corpuses",
+      "handler": "corpus.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/corpuses/:id",
+      "handler": "corpus.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/corpuses/:id",
+      "handler": "corpus.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/corpuses",
+      "handler": "corpus.find",
+      "config": {
+        "policies": [],
+        "query": {
+          "Title_contains": {
+            "type": "string",
+            "required": false
+          }
+        }
+      }
+    }
+    
+  ]
+}
+

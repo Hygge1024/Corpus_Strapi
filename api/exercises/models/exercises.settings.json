@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "name": "Exercises",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StuID": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Corpus": {
+      "model": "corpus"
+    },
+    "StuFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "AllScore": {
+      "type": "float",
+      "default": -1
+    },
+    "IdentifyText": {
+      "type": "richtext"
+    },
+    "Fluency": {
+      "type": "float",
+      "default": 0
+    },
+    "Information": {
+      "type": "float",
+      "default": 0
+    },
+    "Grammar": {
+      "type": "float",
+      "default": 0
+    },
+    "Logical": {
+      "type": "float",
+      "default": 0
+    },
+    "Pace": {
+      "type": "float",
+      "default": 0
+    },
+    "Volume": {
+      "type": "float",
+      "default": 0
+    },
+    "TeacherComments": {
+      "type": "string"
+    },
+    "Skill": {
+      "type": "float",
+      "default": 0
+    }
+  }
+}

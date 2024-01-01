@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "corpuses",
+  "info": {
+    "name": "Corpus",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Introduction": {
+      "type": "richtext",
+      "required": true
+    },
+    "Originaltext": {
+      "type": "richtext",
+      "required": true
+    },
+    "File": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Direction": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "Difficulty": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "Type": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "AuthorID": {
+      "type": "string",
+      "required": true
+    },
+    "Tag_ids": {
+      "collection": "tag"
+    },
+    "State": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "Published": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
